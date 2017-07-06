@@ -4,16 +4,19 @@ import React, {Component} from 'react';
     return <input />
 }*/
 
-class SearchBar extends Component{
+class SearchBar extends Component {
     //inisial state in the class
-    constructor(props){
+    constructor(props) {
+        //like the parent method
         super(props);
-        this.state={term:''}
+
+        //this is the state; always has a new object
+        this.state = {
+            term: ''
+        }
     }
-    render () {
-        return(
-        <input onChange={event => console.log(event.target.value)} />
-    );
+    render() {
+        return (<input onChange={event => this.setState({term: event.target.value})}/>);
     }
 
     /* before
