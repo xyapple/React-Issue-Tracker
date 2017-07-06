@@ -11,3 +11,6 @@ There are two methods for getting started with this repo.
 ```
 npm install --save youtube-api-search
 ```
+```
+npm install --save lodash
+```
