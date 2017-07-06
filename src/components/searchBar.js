@@ -17,7 +17,7 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="search-bar">
                 {/*<h1>Please enter something</h1>*/}
                 <input
                     value = {this.state.term}
