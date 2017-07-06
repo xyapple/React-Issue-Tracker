@@ -9,15 +9,17 @@ import SearchBar from './components/searchBar';
 //Google API Key
 const API_KEY = 'AIzaSyB8Sokjv4f6Bfvuo2UTTk33JuV9XcV_5LE';
 
-YTSearch({key: API_KEY, term:'kayak'}, function(data){
-    console.log(data);
-})
 
 class App extends Component {
     constructor(props){
         super(props);
 
         this.state={videos: []};
+
+        YTSearch({key: API_KEY, term:'kayak'}, (data)=>{
+            this.setState({videos:data})
+        })
+
     }
     render(){
         return (
